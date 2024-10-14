@@ -1,0 +1,37 @@
+package enum
+
+type Language string
+
+const (
+	Auto        Language = "auto"
+	Arabic      Language = "ar"
+	Azerbaijani Language = "az"
+	Catalan     Language = "ca"
+	Chinese     Language = "zh"
+	Czech       Language = "cs"
+	Danish      Language = "da"
+	Dutch       Language = "nl"
+	English     Language = "en"
+	Esperanto   Language = "eo"
+	Finnish     Language = "fi"
+	French      Language = "fr"
+	German      Language = "de"
+	Greek       Language = "el"
+	Hebrew      Language = "he"
+	Hindi       Language = "hi"
+	Hungarian   Language = "hu"
+	Indonesian  Language = "id"
+	Irish       Language = "ga"
+	Italian     Language = "it"
+	Japanese    Language = "ja"
+	Korean      Language = "ko"
+	Persian     Language = "fa"
+	Polish      Language = "pl"
+	Portuguese  Language = "pt"
+	Russian     Language = "ru"
+	Slovak      Language = "sk"
+	Spanish     Language = "es"
+	Swedish     Language = "sv"
+	Turkish     Language = "tr"
+	Ukrainian   Language = "uk"
+)
