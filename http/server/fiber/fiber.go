@@ -7,3 +7,6 @@ import (
 func New() *fiber.App {
 	return fiber.New()
 }
+
+type Ctx = fiber.Ctx
+type Router = fiber.Router

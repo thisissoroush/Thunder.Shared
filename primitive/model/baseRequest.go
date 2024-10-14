@@ -2,13 +2,11 @@ package model
 
 import (
 	"github.com/thisissoroush/thunder.shared/primitive/enum"
-
-	"github.com/google/uuid"
 )
 
 type BaseRequest struct {
-	RequestId        uuid.UUID
+	RequestId        UUID
 	RequestIPAddress string
-	RequestUserId    uuid.UUID
+	RequestUserId    UUID
 	RequestCulture   enum.Language
 }

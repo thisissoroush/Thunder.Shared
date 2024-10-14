@@ -1,21 +1,19 @@
 package middleware
 
 import (
-	_enum "github.com/thisissoroush/thunder.shared/primitive/enum"
-	_primitive "github.com/thisissoroush/thunder.shared/primitive/model"
-
 	"github.com/gofiber/fiber/v2"
-	"github.com/google/uuid"
+	_enum "github.com/thisissoroush/thunder.shared/primitive/enum"
+	_model "github.com/thisissoroush/thunder.shared/primitive/model"
 )
 
 func BaseRequestMiddleware(c *fiber.Ctx) error {
 
 	authHeader := c.Get("Authorization")
 
-	var requestUserId uuid.UUID
+	var requestUserId _model.UUID
 
 	if authHeader != "" {
-		requestUserId = uuid.New()
+		requestUserId = _model.NewUid()
 	}
 
 	culture := c.Get("Culture")
@@ -23,8 +21,8 @@ func BaseRequestMiddleware(c *fiber.Ctx) error {
 		culture = "en"
 	}
 
-	baseRequest := _primitive.BaseRequest{
-		RequestId:        uuid.New(),
+	baseRequest := _model.BaseRequest{
+		RequestId:        _model.NewUid(),
 		RequestIPAddress: c.IP(),
 		RequestUserId:    requestUserId,
 		RequestCulture:   _enum.Language(culture),
